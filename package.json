@@ -1,0 +1,25 @@
+{
+  "name": "bug-profilerz",
+  "version": "0.0.1",
+  "description": "a simple time profiler for functions",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xzela/bug-profilerz.git"
+  },
+  "keywords": [
+    "time",
+    "profile",
+    "debug",
+    "console"
+  ],
+  "author": "Zeph LaFassett <zeph@lafassett.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xzela/bug-profilerz/issues"
+  },
+  "homepage": "https://github.com/xzela/bug-profilerz#readme"
+}
