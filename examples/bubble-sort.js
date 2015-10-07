@@ -1,10 +1,11 @@
 var Profilerz = require('../index.js').Profiler(),
 	utils = require('../lib/utils');
 
-var list = [];
+var list = [],
+	limit = 10000;
 // generate some numbers for the list
-for (var i = 0; i < 10000; i++) {
-	list.push(utils.numbers.random(i, 100000));
+for (var i = 0; i < limit; i++) {
+	list.push(utils.numbers.random(0, limit));
 }
 var args = [
 	list
@@ -19,23 +20,17 @@ var args = [
  */
 var bubble = function (_list) {
 	'use strict';
-
-	var swapped = true;
-	var j = 0;
 	var temp;
-	while (swapped) {
-		swapped = false;
-		j++;
-		for (var i = 0; i < _list.length - j; i++) {
-			if (_list[i] > _list[i + 1]) {
-				temp = _list[i];
-				list[i] = list[i + 1];
-				list[i + 1] = temp;
-				swapped = true;
+	for (var i = 0, l = _list.length; i < l; i++) {
+		for (var j = 0; j < (l - i - 1); j++) {
+			if (_list[j] > _list[j + 1]) {
+				temp = _list[j];
+				_list[j] = _list[j + 1];
+				_list[j + 1] = temp;
 			}
 		}
 	}
 	return _list;
 };
 
-Profilerz.speed(bubble, args, 10);
+Profilerz.speed(bubble, args, 20);
