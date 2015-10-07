@@ -2,12 +2,12 @@ var Profilerz = require('../index.js').Profiler(),
 	utils = require('../lib/utils');
 
 var list = [],
-	limit = 10000000;
+	limit = 1000000;
 
 // generate some numbers for the list
 for (var i = 0; i < limit; i++) {
 	// does not account for repeats
-	list.push(utils.numbers.random(i, limit));
+	list.push(utils.numbers.random(0, limit));
 }
 var args = [
 	list
@@ -74,5 +74,5 @@ var quicksort = function (_list, _left, _right) {
 	return _list;
 };
 
-quicksort(list, 0, list.length - 1);
-// Profilerz.speed(quicksort, args, 21);
+// quicksort(list, 0, list.length - 1);
+Profilerz.speed(quicksort, args, 21);
