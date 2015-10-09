@@ -38,6 +38,9 @@ var monkey = function (_list) {
 			}
 			unsorted = false;
 		}
+		if (!unsorted) {
+			console.log(_list);
+		}
 	}
 	return _list;
 };
