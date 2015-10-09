@@ -1,12 +1,7 @@
 var Profilerz = require('../index.js').Profiler(),
 	utils = require('../lib/utils');
 
-var list = [],
-	limit = 12;
-// generate some numbers for the list
-for (var i = 0; i < limit; i++) {
-	list.push(utils.numbers.random(0, limit));
-}
+var list = utils.numbers.uniqueList(1,100,11);
 var args = [
 	list
 ];
