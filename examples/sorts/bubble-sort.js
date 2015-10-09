@@ -1,5 +1,5 @@
-var Profilerz = require('../index.js').Profiler(),
-	utils = require('../lib/utils');
+var Profilerz = require('../../index.js').Profiler(),
+	utils = require('../../lib/utils');
 
 var list = [],
 	limit = 10000;
