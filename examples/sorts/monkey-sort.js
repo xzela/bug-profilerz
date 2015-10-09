@@ -1,5 +1,5 @@
-var Profilerz = require('../index.js').Profiler(),
-	utils = require('../lib/utils');
+var Profilerz = require('../../index.js').Profiler(),
+	utils = require('../../lib/utils');
 
 var list = utils.numbers.uniqueList(1,100,11);
 var args = [
