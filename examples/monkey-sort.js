@@ -29,20 +29,14 @@ var monkey = function (_list) {
 
 		// switch
 		temp = _list[indx1];
-		// console.log(indx1, _list[indx1]);
 		_list[indx1] = _list[indx2];
 		_list[indx2] = temp;
-		// unsorted = false;
-
 		for (var i = 0; i < _list.length - 1; i++) {
 			if (_list[i] > _list[i + 1]) {
 				unsorted = true;
 				break;
 			}
 			unsorted = false;
-		}
-		if (!unsorted) {
-			console.log(_list);
 		}
 	}
 	return _list;
